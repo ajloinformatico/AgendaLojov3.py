@@ -229,7 +229,7 @@ class Principal:
                         self.bd.cursor.execute("update grupos set contacto_miembro = '%s' where contacto_miembro like "
                                                "'%s'"  % (self.imput_edit_user.get(), self.usu))
 
-                        # self.bd.conexion.commit()
+                        self.bd.conexion.commit()
                         self.agenda = Agenda()
                         self.load_data()
                         self.load_Treeview_consulta_pri()
